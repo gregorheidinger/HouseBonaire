@@ -31,8 +31,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    linear-gradient(90deg,rgba(4,31,39,.78) 0%,rgba(4,31,39,.48) 45%,rgba(4,31,39,.15) 100%),
-    linear-gradient(0deg,rgba(4,31,39,.35),rgba(4,31,39,0) 45%),
+    linear-gradient(90deg,rgba(4,31,39,.82) 0%,rgba(4,31,39,.54) 48%,rgba(4,31,39,.18) 100%),
+    linear-gradient(0deg,rgba(4,31,39,.38),rgba(4,31,39,0) 45%),
     url("../images/sunset.webp") center 58%/cover no-repeat;
   transform:scale(1.02);
   animation:slowZoom 18s ease-out both;
@@ -45,10 +45,19 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 }
 .brand{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.13em;font-size:.9rem}
 .nav-link{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55)}
+.nav-sale{
+  color:#fff;text-decoration:none;font-size:.76rem;font-weight:900;letter-spacing:.13em;
+  border:1px solid rgba(255,255,255,.62);border-radius:999px;padding:9px 15px;
+  background:rgba(4,31,39,.18);backdrop-filter:blur(5px)
+}
 .hero-content{
   position:relative;z-index:2;
   margin:auto;
-  padding:90px 0 120px;
+  padding:78px 0 105px;
+}
+.sale-badge{
+  display:inline-block;margin:0 0 18px;padding:8px 13px;border-radius:999px;
+  background:#fff;color:var(--deep);font-size:.7rem;font-weight:900;letter-spacing:.14em;
 }
 .eyebrow{
   text-transform:uppercase;letter-spacing:.19em;font-weight:800;font-size:.75rem;
@@ -56,10 +65,16 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 }
 .eyebrow.dark{color:var(--sea)}
 h1,h2,h3{line-height:1.06;margin-top:0}
-h1{font-size:clamp(3.2rem,8vw,7.3rem);max-width:980px;letter-spacing:-.045em;margin-bottom:26px}
+h1{font-size:clamp(2.9rem,6.5vw,6.4rem);max-width:1080px;letter-spacing:-.045em;margin-bottom:24px}
 h2{font-size:clamp(2.2rem,4.8vw,4.6rem);letter-spacing:-.04em;margin-bottom:24px}
 h3{font-size:clamp(1.25rem,2.2vw,1.65rem);margin-bottom:12px}
-.lead{font-size:clamp(1.15rem,2.2vw,1.55rem);max-width:720px;color:rgba(255,255,255,.9);margin-bottom:34px}
+.lead{font-size:clamp(1.12rem,2vw,1.45rem);max-width:780px;color:rgba(255,255,255,.92);margin-bottom:24px}
+.hero-domains{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;max-width:900px}
+.hero-domains span{
+  padding:7px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.35);
+  background:rgba(4,31,39,.3);font-size:.86rem;font-weight:750;letter-spacing:.01em;
+  backdrop-filter:blur(4px)
+}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .button{
   display:inline-flex;align-items:center;justify-content:center;
@@ -118,7 +133,11 @@ h3{font-size:clamp(1.25rem,2.2vw,1.65rem);margin-bottom:12px}
   .hero{min-height:90vh}
   .wrap{width:min(100% - 28px,1180px)}
   .nav{padding:20px 0}
-  .hero-content{padding:70px 0 100px}
+  .nav-sale{font-size:.64rem;padding:8px 11px}
+  .hero-content{padding:62px 0 95px}
+  h1{font-size:clamp(2.65rem,12vw,4.4rem)}
+  .hero-domains{gap:6px}
+  .hero-domains span{font-size:.76rem}
   .domain-grid,.split{grid-template-columns:1fr}
   .benefits{grid-template-columns:1fr}
   .section{padding:78px 0}
